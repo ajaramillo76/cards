@@ -36,6 +36,15 @@ public class Deck {
     dealt.clear();
     Collections.shuffle(cards, rng);
   }
+
+  public int remaining() {
+    return cards.size();
+  }
+
+  public int dealt() {
+    return dealt.size();
+  }
+
   @Override
   public String toString() {
     return cards.toString();

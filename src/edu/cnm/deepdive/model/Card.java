@@ -2,12 +2,24 @@ package edu.cnm.deepdive.model;
 
 import java.util.Objects;
 
+/**
+ * Encapsulates a single playing card as a combination of {@link Suit} and {@link Rank}. Instances
+ * of this class are immutable.
+ *
+ * @author Archie Jaramillo
+ */
 public class Card {
 
   private final Suit suit;
   private final Rank rank;
   private final int hash;
 
+  /**
+   * Initializes the Card instance with the specified {@link Suit} and {@link Rank}.
+   *
+   * @param suit {@link Suit} value of card.
+   * @param rank {@link Rank} value of rank
+   */
 
   public Card(Suit suit, Rank rank) {
     this.suit = suit;
@@ -15,6 +27,9 @@ public class Card {
     hash = Objects.hash(suit, rank);
   }
 
+  /**
+   * Returns {@link Suit} of this Card instance.
+   */
   public Suit getSuit() {
     return suit;
   }

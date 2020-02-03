@@ -1,5 +1,11 @@
 package edu.cnm.deepdive.model;
 
+import edu.cnm.deepdive.model.Suit.Color;
+
+/**
+ * Encapsulates the Rank of standard playing cards. The enum includes {@link #symbol()}, to return the immutable symbol and {@link Rank} enum instance of any suit.
+ */
+
 public enum Rank {
   ACE,
   TWO,
@@ -14,6 +20,7 @@ public enum Rank {
   JACK,
   QUEEN,
   KING;
+
 
   private static final String[] symbols = {
       "A",
@@ -30,6 +37,12 @@ public enum Rank {
       "Q",
       "K"
   };
+
+  /**
+   * Returns {@Link String} instance value for this symbol.
+   *
+   * @return {@Link String} symbol.
+   */
 
   public String symbol() {
     return symbols[ordinal()];

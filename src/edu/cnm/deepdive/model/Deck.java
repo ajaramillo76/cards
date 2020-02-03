@@ -8,10 +8,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Encapsulates the shuffling {@Link shuffle} and dealing {@Link dealt} a deck of playing cards of {@Link #cards}.
+ */
+
 public class Deck {
 
   private List<Card> cards;
   private List<Card> dealt;
+
+  /**
+   * Returns the Deck instance with the specified {@Link cards}.
+   */
 
   public Deck() {
     cards = new ArrayList<>();
@@ -30,6 +38,12 @@ public class Deck {
     }
     return card;
   }
+
+  /**
+   * Initialized the shuffle instance with the specified {@Link cards} and {@Link dealt}.
+   *
+   * @param rng {@Link Random}.
+   */
 
   public void shuffle(Random rng) {
     cards.addAll(dealt);

@@ -8,6 +8,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Encapsulates the Trick as a combination of {@Link deck}, {@Link redpile} and {@Link blackpile}.
+ */
+
 public class Trick {
 
   private Deck deck;

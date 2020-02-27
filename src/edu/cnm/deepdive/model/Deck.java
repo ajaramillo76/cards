@@ -13,7 +13,7 @@ import java.util.Random;
  * Encapsulates the shuffling {@Link shuffle} and dealing {@Link dealt} a deck of playing cards of {@Link #cards}.
  */
 
-public class Deck {
+public class Deck implements Comparator<Card> {
 
   private List<Card> cards;
   private List<Card> dealt;
@@ -79,7 +79,11 @@ public class Deck {
     if (gather) {
       gather();
     }
-    cards.sort(Comparator.comparing(Card::getSuit).thenComparing(Card::getRank));
+    cards.sort(this);
   }
 
+  @Override
+  public int compare(Card card1, Card card2) {
+    return Comparator.comparing(Card::getSuit).thenComparing(Card::getRank).compare(card1, card2);
+  }
 }

@@ -75,6 +75,13 @@ public class Deck {
     deck.shuffle(new SecureRandom());
     System.out.println(deck);
   }
+
+  /**
+   * Gathers the sorted {@Link cards}.
+   *
+   * @param gather
+   */
+
   public void sort(boolean gather) {
     if (gather) {
       gather();
